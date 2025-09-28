@@ -213,9 +213,9 @@ Jika memilih nomor 6 untuk keluar dari sistem, akan keluar output terima kasih t
 
       4) Create (tambahSesi)
      
-         <img width="959" height="712" alt="image" src="https://github.com/user-attachments/assets/fa4be15a-63a4-46c8-9cdf-ec2655c6d717" />
+         <img width="956" height="751" alt="image" src="https://github.com/user-attachments/assets/559d5917-ae4d-43cb-adff-7c140da4119b" />
 
-         Metode tambahSesi() digunakan untuk menambahkan sesi baru ke dalam daftar. Program menampilkan pilihan jenis sesi yang tersedia, lalu meminta pengguna memasukkan nama sesi dan waktu belajar (dalam menit). Jika pengguna memilih sesi fokus, maka dibuat objek `SesiFokus` dan program masuk ke perulangan do-while untuk menambahkan daftar tugas hingga pengguna mengetik “selesai”. Jika memilih sesi istirahat, maka pengguna juga diminta memasukkan waktu istirahat (dalam menit) sebelum dibuat objek SesiIstirahat. Setiap objek sesi yang berhasil dibuat akan ditambahkan ke dalam daftarSesi, sedangkan jika pilihan tidak valid program menampilkan pesan kesalahan.
+         tambahSesi() yang berfungsi menambahkan sesi belajar baru berdasarkan input pengguna. Program menampilkan pilihan jenis sesi (Sesi Fokus atau Sesi Istirahat), lalu membaca pilihan pengguna, nama sesi, dan waktu belajar. Jika pengguna memilih Sesi Fokus (pilihan == 1), program membuat objek SesiFokus, meminta pengguna menambahkan daftar tugas secara berulang sampai mengetik "selesai", lalu menyimpan sesi ke daftarSesi dan memanggil dua versi method mulai() (contoh penggunaan overloading). Jika memilih Sesi Istirahat (pilihan == 2), program meminta tambahan input waktu istirahat, membuat objek SesiIstirahat, dan menyimpannya ke daftarSesi. Jika input tidak valid, program menampilkan pesan error.
 
       5) Read (lihatSesi)
 
