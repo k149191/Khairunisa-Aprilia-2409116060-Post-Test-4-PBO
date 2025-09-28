@@ -24,7 +24,7 @@ Jika memilih nomor 1, program akan meminta Anda memilih jenis sesi yang ingin di
 
 - Sesi Fokus
 
-  <img width="665" height="194" alt="image" src="https://github.com/user-attachments/assets/f14b54d5-313d-4d03-a19d-313e7bc17ef2" />
+  <img width="842" height="279" alt="image" src="https://github.com/user-attachments/assets/94a75ca2-0040-41ea-bc6d-6b41803faf41" />
 
 - Sesi Istirahat
 
