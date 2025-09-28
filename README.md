@@ -98,13 +98,19 @@ Jika memilih nomor 6 untuk keluar dari sistem, akan keluar output terima kasih t
 
       Getter (getNamaSesi, getWaktuBelajar) digunakan untuk mengambil nilai dari atribut, sedangkan setter (setNamaSesi, setWaktuBelajar) digunakan untuk mengubah nilainya dengan validasi: namaSesi tidak boleh kosong/null dan waktuBelajar harus lebih dari 0. Jika aturan dilanggar, program akan melempar IllegalArgumentException, sehingga data yang tersimpan selalu valid.
 
-   5) Metode Abstract
+   5) Override Metode dari Interface
   
-      <img width="521" height="75" alt="image" src="https://github.com/user-attachments/assets/02c35351-3063-47c7-92f3-2d1385e1180f" />
+     <img width="1388" height="192" alt="image" src="https://github.com/user-attachments/assets/2cf3de27-92db-45da-8e95-7eb3125c4b20" />
 
-      Kode public abstract void infoSesi(); ada di superclass dan fungsinya jadi aturan. Artinya semua kelas turunan dari superclass ini wajib membuat isi atau logika dari infoSesi().
+      Kode Override menandakan bahwa method ini berasal dari interface InfoSesi.
 
-3. SesiFokus.java
+3. InfoSesi.java
+
+   <img width="507" height="158" alt="image" src="https://github.com/user-attachments/assets/dec9fe37-fb51-471c-912e-d6f4ceb48db1" />
+
+   Interface InfoSesi adalah kontrak yang mendefinisikan satu method abstrak void infoSesi(), yang wajib diimplementasikan oleh setiap class yang meng-implements interface ini. Method ini tidak memiliki isi, sehingga masing-masing class bebas menentukan cara menampilkan informasi sesi sesuai kebutuhan. Dengan interface ini, kita bisa menggunakan polimorfisme untuk memanggil infoSesi() pada berbagai class yang berbeda tetapi tetap mengikuti kontrak yang sama.
+
+4. SesiFokus.java
 
    1) Package
 
@@ -142,7 +148,13 @@ Jika memilih nomor 6 untuk keluar dari sistem, akan keluar output terima kasih t
 
       Metode infoSesi() yang meng-override metode abstrak dari superclass SesiBelajar. Metode ini menampilkan informasi lengkap tentang sesi fokus ke layar, termasuk nama sesi, durasi belajar, dan daftar tugas. Jika daftarTugas kosong, akan dicetak tulisan “(kosong)”, sedangkan jika ada isinya, setiap tugas akan ditampilkan satu per satu dengan format “- tugas”. Dengan cara ini, metode infoSesi() memberikan gambaran jelas tentang sesi yang sedang dibuat atau dijalankan.
 
-4. SesiIstirahat.java
+    7) Overloading
+  
+       <img width="1595" height="287" alt="image" src="https://github.com/user-attachments/assets/6b078e9f-54c2-4755-8909-70dd4ad452de" />
+
+       Kode tersebut menunjukkan method overloading, yaitu dua method dengan nama yang sama mulai() tetapi memiliki parameter berbeda. Versi pertama tidak menerima parameter dan menampilkan pesan menggunakan durasi default dari getWaktuBelajar(), sedangkan versi kedua menerima parameter durasiMenit sehingga kita bisa menentukan durasi sesi secara manual. Overloading ini memberikan fleksibilitas saat memanggil method, baik menggunakan durasi bawaan maupun durasi yang ditentukan sendiri.
+
+5. SesiIstirahat.java
    
   1) Package
 
@@ -175,7 +187,7 @@ Jika memilih nomor 6 untuk keluar dari sistem, akan keluar output terima kasih t
 
          Metode infoSesi() yang meng-override metode abstrak dari superclass SesiBelajar. Metode ini menampilkan informasi lengkap tentang objek SesiIstirahat, yaitu nama sesi, waktu belajar, dan waktu istirahat, masing-masing ditampilkan dalam satuan menit. Dengan adanya override ini, setiap kali infoSesi() dipanggil pada objek SesiIstirahat, program akan menampilkan detail yang sesuai dengan karakteristik sesi istirahat, bukan perilaku default dari superclass.
 
-5. CrudService.java
+6. CrudService.java
 
   1) Package
   
@@ -236,7 +248,7 @@ Jika memilih nomor 6 untuk keluar dari sistem, akan keluar output terima kasih t
          validasiInputInt() digunakan untuk memvalidasi input angka dari pengguna agar sesuai dengan format yang benar. Metode ini menerima parameter berupa pesan, lalu menjalankan perulangan while(true) dengan blok try-catch. Input yang diberikan pengguna diubah menjadi integer menggunakan Integer.parseInt(), kemudian dicek apakah bernilai lebih dari 0. Jika input tidak valid atau tidak sesuai, program akan menampilkan pesan kesalahan dan meminta input ulang. Metode ini memastikan hanya angka positif yang dapat diterima sebelum nilai dikembalikan.
 
 
-6. Main.java (Entry Point Class)
+7. Main.java (Entry Point Class)
 
    1) Package
 
