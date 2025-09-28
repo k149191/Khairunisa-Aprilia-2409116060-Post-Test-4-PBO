@@ -65,9 +65,9 @@ Jika memilih nomor 6 untuk keluar dari sistem, akan keluar output terima kasih t
 
 1. Struktur Project
 
-<img width="264" height="208" alt="image" src="https://github.com/user-attachments/assets/644fe6ce-7759-4efc-8c7e-d968effc4b4f" />
+<img width="397" height="227" alt="image" src="https://github.com/user-attachments/assets/0fbd4948-0fe0-4b5b-9cbf-eebb0e904396" />
 
-   1) Package Model yang terdapat SesiBelajat.java dan tempat menyimpan model data untuk aplikasi, yaitu SesiBelajar (sebagai superclass abstrak), SesiFokus (subclass), dan SesiIstirahat (subclass).
+   1) Package Model yang terdapat SesiBelajat.java dan tempat menyimpan model data untuk aplikasi, yaitu SesiBelajar (sebagai superclass abstrak), SesiFokus (subclass), SesiIstirahat (subclass) dan InfoSesi (Interface).
    2) Package Service yang terdapat CrudService.java dan tempat menyimpan kode logika CRUD.
    3) Package Main yang terdapat Main.Java dan tempat menyimpan menu user.
 
